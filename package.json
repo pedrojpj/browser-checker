@@ -10,7 +10,7 @@
     "lint": "eslint ./src/**/*.js",
     "build": "webpack",
     "prepublish": "npm run build",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+    "semantic-release": "npm publish && semantic-release"
   },
   "author": "",
   "license": "ISC",
