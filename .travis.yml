@@ -22,5 +22,5 @@ before_install:
 before_script:
 - yarn
 script:
-- yarn test -- --coverage
+- yarn test
 - codecov
