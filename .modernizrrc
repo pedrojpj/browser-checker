@@ -1,0 +1,22 @@
+{
+  "minify": true,
+  "options": [
+    "domPrefixes",
+    "hasEvent",
+    "testAllProps",
+    "testProp",
+    "html5shiv",
+    "setClasses",
+    "addTest"
+  ],
+  "feature-detects": [
+    "test/history",
+    "test/postmessage",
+    "test/svg",
+    "test/a/download",
+    "test/css/transitions",
+    "test/file/api",
+    "test/storage/localstorage",
+    "test/svg/inline"
+  ]
+}

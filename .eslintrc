@@ -1,0 +1,36 @@
+{
+  "extends": [
+    "eslint-config-airbnb",
+    "eslint-config-prettier"
+  ],
+  "plugins": ["prettier"],
+  "rules": {
+    "import/prefer-default-export": 0,
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": [
+          "**/*.test.js",
+          "webpack.config.js",
+          "webpack.dev.config.js",
+          "webpack.demo.config.js"
+        ]
+      }
+    ],
+    "prettier/prettier": [
+      "error",
+      {
+        "tabWidth": 2,
+        "singleQuote": true,
+        "trailingComma": "none",
+        "jsxBracketSameLine": false
+      }
+    ],
+    "no-useless-escape": 0
+  },
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true,
+    "jest/globals": true
+  }
+}
