@@ -340,19 +340,22 @@ Modernizr.addTest('support', function() {
           }
       }
 
-
       if (support) {
         document.addEventListener("DOMContentLoaded", function(event) {
           document.getElementById('browser-check').style.display = "none";
         });
-
       }
-
 
       return support;
 
   } else {
-      return support;
+
+    if (support) {
+      document.addEventListener("DOMContentLoaded", function(event) {
+        document.getElementById('browser-check').style.display = "none";
+      });
+    }
+    return support;
   }
 
 
