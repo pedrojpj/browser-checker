@@ -10,7 +10,8 @@
     "lint": "eslint ./src/**/*.js",
     "build": "webpack",
     "prepublish": "npm run build",
-    "semantic-release": "npm publish && semantic-release"
+    "semantic-release": "semantic-release",
+    "travis-deploy-once": "travis-deploy-once"
   },
   "author": "",
   "license": "ISC",
@@ -35,7 +36,8 @@
     "prettier": "^1.8.2",
     "semantic-release": "^15.6.3",
     "webpack": "^3.8.1",
-    "webpack-dev-server": "^2.11.1"
+    "webpack-dev-server": "^2.11.1",
+    "travis-deploy-once": "^5.0.1"
   },
   "config": {
     "commitizen": {
@@ -45,5 +47,9 @@
   "dependencies": {
     "bowser": "^1.9.4",
     "modernizr": "^3.6.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pedrojpj/browser-checker.git"
   }
 }

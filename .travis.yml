@@ -7,7 +7,7 @@ dist: trusty
 node_js:
 - 8.9.1
 after_success:
-- npm run semantic-release
+- npm run travis-deploy-once
 cache:
   yarn: true
   directories:
