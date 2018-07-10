@@ -291,17 +291,14 @@ let bowser;
 
 
 const domStyle = (support) => {
-  if (support) {
-    document.addEventListener("DOMContentLoaded", function(event) {
-      document.getElementById('browser-check').style.display = "none";
-    });
-  }
-  else {
-    document.addEventListener("DOMContentLoaded", function(event) {
-      document.getElementById('browser-check').style.position = "fixed";
-      document.getElementById('browser-check').style.zIndex = 10000000;
-    });
-  }
+  document.addEventListener("DOMContentLoaded", function(event) {
+
+    if (!support) {
+      var nos = document.getElementsByTagName("noscript")[0];
+      var nosHtml = nos.textContent||nos.innerHTML;
+      document.body.innerHTML = nosHtml;
+    }
+  });
 }
 
 
