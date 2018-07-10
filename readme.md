@@ -13,7 +13,9 @@ To use add the following tag to your html and define the content you want to use
 
 
 ```html
+<noscript>
 <div id="browser-check">Your browser is not compatible with this website</div>
+</noscript>
 ```
 
 Define the browsers that are compatible with your website in this way:
