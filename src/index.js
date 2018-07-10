@@ -286,10 +286,23 @@ let bowser;
    */
   bowser._detect = detect;
 
-
-  console.log(bowser)
   return bowser
 });
+
+
+const domStyle = (support) => {
+  if (support) {
+    document.addEventListener("DOMContentLoaded", function(event) {
+      document.getElementById('browser-check').style.display = "none";
+    });
+  }
+  else {
+    document.addEventListener("DOMContentLoaded", function(event) {
+      document.getElementById('browser-check').style.position = "fixed";
+      document.getElementById('browser-check').style.zIndex = 10000000;
+    });
+  }
+}
 
 
 Modernizr.addTest('support', function() {
@@ -340,21 +353,11 @@ Modernizr.addTest('support', function() {
           }
       }
 
-      if (support) {
-        document.addEventListener("DOMContentLoaded", function(event) {
-          document.getElementById('browser-check').style.display = "none";
-        });
-      }
-
+      domStyle(support);
       return support;
 
   } else {
-
-    if (support) {
-      document.addEventListener("DOMContentLoaded", function(event) {
-        document.getElementById('browser-check').style.display = "none";
-      });
-    }
+    domStyle(support);
     return support;
   }
 
